@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abune Aregawi Eritrean Orthodox Tewahedo Church</title>
-    <!-- Premium Fonts for a high-end, majestic aesthetic -->
+    <!-- Premium Font Integration -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Smooth Scrolling and Custom Scrollbar */
+        /* Smooth Layout Reset */
         html { scroll-behavior: smooth; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -21,13 +21,13 @@
             overflow-x: hidden;
         }
 
-        /* High-Aesthetic Glass Navigation Bar */
+        /* Professional Fixed Navigation Bar */
         .navbar { 
             display: flex; 
-            justify-content: center; 
+            justify-content: space-between; 
             align-items: center;
-            padding: 20px 50px; 
-            background: rgba(255, 255, 255, 0.85); 
+            padding: 15px 50px; 
+            background: rgba(255, 255, 255, 0.95); 
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
             position: fixed;
@@ -35,30 +35,43 @@
             width: 100%;
             z-index: 1000;
             border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
         }
         .logo { 
             font-family: 'Cinzel', serif;
-            font-size: 22px; 
+            font-size: 20px; 
             font-weight: 700; 
             color: #1a365d; 
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
             gap: 10px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #d69e2e;
         }
 
         /* Cinematic Hero Section */
         .hero { 
             background: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://unsplash.com') no-repeat center center/cover; 
-            height: 90vh; 
+            height: 85vh; 
             display: flex; 
             justify-content: center; 
             align-items: center; 
             text-align: center; 
             color: #fff;
             padding: 0 20px;
-            margin-top: 0;
         }
         .hero-content {
             max-width: 900px;
@@ -66,26 +79,17 @@
         }
         .hero h1 { 
             font-family: 'Cinzel', serif;
-            font-size: 46px; 
+            font-size: 42px; 
             font-weight: 700;
             margin-bottom: 15px; 
-            letter-spacing: 1px;
             line-height: 1.2;
             text-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
         .hero h2 { 
-            font-size: 26px; 
-            margin-bottom: 30px; 
+            font-size: 24px; 
+            margin-bottom: 35px; 
             font-weight: 300; 
             color: #e2e8f0; 
-            letter-spacing: 0.5px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
-        }
-        .hero p { 
-            font-size: 18px; 
-            margin-bottom: 35px; 
-            color: #cbd5e0;
-            font-weight: 400;
         }
         .btn { 
             background: linear-gradient(135deg, #d69e2e, #b7791f);
@@ -94,21 +98,19 @@
             text-decoration: none; 
             border-radius: 50px; 
             font-weight: 600; 
-            letter-spacing: 0.5px;
-            display: inline-block; 
-            box-shadow: 0 10px 20px rgba(183, 121, 31, 0.3);
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            box-shadow: 0 10px 20px rgba(183, 121, 31, 0.25);
+            transition: all 0.4s ease;
         }
         .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(183, 121, 31, 0.4);
+            transform: translateY(-2px);
+            box-shadow: 0 15px 25px rgba(183, 121, 31, 0.35);
         }
 
-        /* Elegant Content Structure */
+        /* Section Global Settings */
         section { 
-            padding: 100px 24px; 
+            padding: 90px 24px; 
             text-align: center; 
-            max-width: 900px; 
+            max-width: 1000px; 
             margin: 0 auto; 
         }
         section h2 {
@@ -118,7 +120,6 @@
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
-            letter-spacing: 0.5px;
         }
         section h2::after {
             content: '';
@@ -126,16 +127,15 @@
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
+            width: 50px;
             height: 3px;
             background-color: #d69e2e;
-            border-radius: 2px;
         }
         
         .section-desc {
             font-size: 17px;
             color: #4a5568;
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto 20px auto;
         }
         .tigrinya-text { 
@@ -143,150 +143,179 @@
             font-size: 16px; 
             display: block; 
             margin-top: 15px; 
-            font-weight: 400;
             line-height: 1.8;
         }
 
-        /* Premium Schedule Cards */
-        .visit-section { 
-            background: #ffffff; 
-            border-radius: 24px; 
-            margin: 40px auto;
-            padding: 60px 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.03);
-            border: 1px solid rgba(226, 232, 240, 0.6);
-        }
+        /* Dynamic Grid Framework */
         .info-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-top: 40px;
             text-align: left;
         }
-        @media (max-width: 768px) {
-            .info-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 32px; }
-            .hero h2 { font-size: 20px; }
-        }
         .info-card {
-            background-color: #f8fafc;
-            padding: 25px;
+            background-color: #ffffff;
+            padding: 30px;
             border-radius: 16px;
             border-left: 4px solid #1a365d;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border-top: 1px solid rgba(226,232,240,0.5);
+            border-right: 1px solid rgba(226,232,240,0.5);
+            border-bottom: 1px solid rgba(226,232,240,0.5);
         }
-        .info-card.gold-card {
-            border-left-color: #d69e2e;
-        }
+        .info-card.gold-card { border-left-color: #d69e2e; }
         .info-card h4 {
             font-family: 'Cinzel', serif;
             font-size: 18px;
             color: #1a365d;
             margin-bottom: 8px;
         }
-        
+
+        /* Aesthetic Schedule & Times Table Layout */
         .schedule-box {
-            background: #f8fafc;
-            border-radius: 16px;
-            padding: 30px;
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px;
             text-align: left;
-            margin-top: 30px;
-            border: 1px dashed #cbd5e0;
+            margin-top: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
         }
         .schedule-box h3 {
             font-family: 'Cinzel', serif;
             font-size: 22px;
             color: #1a365d;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-bottom: 20px;
         }
         .schedule-item {
-            padding: 15px 0;
-            border-bottom: 1px solid #e2e8f0;
+            padding: 20px 0;
+            border-bottom: 1px solid #f1f5f9;
         }
         .schedule-item:last-child { border-bottom: none; }
 
-        /* Minimal Luxury Footer */
+        /* Elegant Orthodox Calendar Display Component */
+        .calendar-container {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 40px 30px;
+            margin-top: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+            border: 1px solid #e2e8f0;
+            text-align: left;
+        }
+        .calendar-header-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            color: #1a365d;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        .calendar-day-card {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 20px;
+            border-top: 3px solid #d69e2e;
+            transition: transform 0.3s ease;
+        }
+        .calendar-day-card:hover {
+            transform: translateY(-3px);
+        }
+        .date-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #718096;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+        .feast-title {
+            font-family: 'Cinzel', serif;
+            font-size: 17px;
+            color: #1a365d;
+            font-weight: 700;
+        }
+
+        /* Dark Premium Donation Box */
+        .donation-banner {
+            background: linear-gradient(135deg, #1a365d, #0f2043);
+            color: #ffffff;
+            border-radius: 24px;
+            padding: 60px 40px;
+            box-shadow: 0 20px 40px rgba(15, 32, 67, 0.15);
+            margin-top: 40px;
+        }
+        .donation-banner h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 26px;
+            color: #d69e2e;
+            margin-bottom: 15px;
+        }
+        .donation-banner p {
+            color: #e2e8f0;
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .btn-donate {
+            background: #d69e2e;
+            color: #1a365d;
+            padding: 14px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(214, 158, 46, 0.2);
+        }
+        .btn-donate:hover {
+            background: #f6e05e;
+            transform: translateY(-2px);
+        }
+
+        /* Luxury Minimalist Footer */
         footer { 
-            background-color: #0f2043; 
+            background-color: #0b1329; 
             color: #a0aec0; 
             text-align: center; 
             padding: 40px 20px; 
             font-size: 14px;
-            letter-spacing: 0.5px;
+            margin-top: 60px;
         }
-        footer p { color: #e2e8f0; font-family: 'Inter', sans-serif; }
+        footer p { color: #e2e8f0; }
 
-        /* Simple Elegant Animations */
+        @media (max-width: 768px) {
+            .navbar { padding: 15px 20px; }
+            .nav-links { display: none; } /* Mobile optimization */
+            .info-grid { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 30px; }
+            .hero h2 { font-size: 18px; }
+        }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(15px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Aesthetic Glass Navbar -->
+    <!-- Professional Top Menu Navigation Bar -->
     <nav class="navbar">
-        <div class="logo">⛪ ABUNE AREGAWI • ኣቡነ ኣረጋዊ</div>
+        <div class="logo">⛪ ABUNE AREGAWI</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#calendar">Calendar</a>
+            <a href="#donation">Donate</a>
+        </div>
     </nav>
 
-    <!-- Cinematic Hero Banner -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Abune Aregawi</h1>
-            <h2>ቤተ ክርስቲያን ተዋህዶ ኤርትራ ኣቡነ ኣረጋዊ</h2>
-            <p>Eritrean Orthodox Tewahedo Church in Edmonton</p>
-            <a href="#visit" class="btn">Plan Your Visit • መደብ ምብጻሕኩም</a>
-        </div>
-    </header>
-
-    <!-- Beautiful About Section -->
-    <section id="about">
-        <h2>Our Community • ማሕበረሰብና</h2>
-        <p class="section-desc">Welcome to Abune Aregawi Eritrean Orthodox Tewahedo Church in Edmonton, Alberta. We are a vibrant community dedicated to preserving our ancient Orthodox faith, sharing spiritual growth, and fostering deep fellowship. Our doors are always open to everyone seeking spiritual peace and community.</p>
-        <p class="tigrinya-text">እንቋዕ ናብ ቤተ ክርስቲያን ተዋህዶ ኤርትራ ኣቡነ ኣረጋዊ ኣብ ኤድመንተን (ኣልበርታ) ብደሓን መጻእኩም። ንሕና ጥንታዊ ኦርቶዶክሳዊ እምነትና ንምዕቃብ፡ መንፈሳዊ ዕብየት ንምክፋልን ድልዱል ሕብረት ንምፍጣርን ዝተወፈና ንጡፍ ማሕበረሰብ ኢና። መንፈሳዊ ሰላምን ሕብረትን ንዝደሊ ዝኾነ ሰብ ማዕጾና ኩሉ ግዜ ክፉት እዩ።</p>
-    </section>
-
-    
-    <section id="visit" style="padding-top: 0;">
-        <div class="visit-section">
-            <h2>Gathering & Location • ሓበሬታ</h2>
-            
-            <div class="info-grid">
-                <div class="info-card">
-                    <h4>Address • ኣድራሻ</h4>
-                    <p style="font-weight: 500;">9831 75 Street</p>
-                    <p style="color: #718096; font-size: 15px;">Edmonton, AB T6A 2Y8</p>
-                </div>
-                <div class="info-card gold-card">
-                    <h4>Email Us • ኢመይል</h4>
-                    <p style="font-weight: 500; word-break: break-all;">abune.aregawi1@gmail.com</p>
-                    <p style="color: #718096; font-size: 15px;">Reach out for questions</p>
-                </div>
-            </div>
-            
-            <div class="schedule-box">
-                <h3>🗓️ Weekly Schedule • ናይ ሰሙን መደባት</h3>
-                
-                <div class="schedule-item">
-                    <p style="font-weight: 600; color: #1a365d;">Holy Mass / ቅዱስ ቅዳሴ</p>
-                    <p style="font-size: 15px; color: #4a5568;">Saturdays <span style="color:#a0aec0; margin:0 8px;">|</span> ቀዳም</p>
-                </div>
-                
-                <div class="schedule-item">
-                    <p style="font-weight: 600; color: #1a365d;">Church School / ቤት ትምህርቲ ሰንበት</p>
-                    <p style="font-size: 15px; color: #4a5568;">Sundays: 2:00 PM – 6:00 PM <span style="color:#a0aec0; margin:0 8px;">|</span> ሰንበት ካብ ሰዓት 2:00 ድ.ቀ - 6:00 ድ.ቀ (All Ages / ንኹሉ ዕድመ)</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LOOK HERE: The copyright is already built-in right below it! -->
-    <footer>
-        <p>&copy; 2026 Abune Aregawi Eritrean Orthodox Tewahedo Church. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
