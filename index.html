@@ -6,7 +6,7 @@
     <title>Abune Aregawi Eritrean Orthodox Tewahedo Church</title>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -33,9 +33,16 @@
         .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
         .calendar-day-card { background: #f8fafc; border-radius: 12px; padding: 20px; border-top: 3px solid #d69e2e; }
         .donation-banner { background: linear-gradient(135deg, #1a365d, #0f2043); color: #ffffff; border-radius: 24px; padding: 60px 40px; }
-        .btn-donate { background: #d69e2e; color: #1a365d; padding: 14px 40px; text-decoration: none; border-radius: 50px; font-weight: 700; display: inline-block; }
+        .btn-donate { background: #d69e2e; color: #1a365d; padding: 14px 40px; text-decoration: none; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 15px; }
+        .baptism-container { background: #ffffff; border-radius: 24px; padding: 40px; border: 1px solid #e2e8f0; text-align: left; margin-top: 40px; }
+        .baptism-instructions { margin-bottom: 25px; padding: 20px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #d69e2e; }
+        .baptism-instructions ol { padding-left: 20px; margin-top: 10px; }
+        .baptism-instructions li { margin-bottom: 8px; }
+        .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 20px; }
+        .btn-secondary { background: #ffffff; color: #1a365d; border: 2px solid #1a365d; padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: 600; display: inline-block; transition: all 0.3s ease; }
+        .btn-secondary:hover { background: #1a365d; color: #ffffff; }
         footer { background-color: #0b1329; color: #a0aec0; text-align: center; padding: 40px 20px; font-size: 14px; margin-top: 60px; }
-        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
+        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .action-buttons { flex-direction: column; } }
     </style>
 </head>
 <body>
@@ -45,6 +52,7 @@
         <div class="nav-links">
             <a href="#about">About</a>
             <a href="#schedule">Schedule</a>
+            <a href="#baptism">Baptism & Confession</a>
             <a href="#calendar">Calendar</a>
             <a href="#donation">Donate</a>
         </div>
@@ -74,7 +82,7 @@
             </div>
             <div class="info-card gold-card">
                 <h4>Email Connection • ኢመይል</h4>
-                <p>abunearegawi1@gmail.com</p>
+                <p>saintabunearegawi@gmail.com</p>
             </div>
         </div>
         <div class="schedule-box">
@@ -85,6 +93,25 @@
             <div class="schedule-item">
                 <p style="font-weight:600;">Church School / ቤት ትምህርቲ ሰንበት</p>
                 <p>Sundays: 2:00 PM – 6:00 PM | ሰንበት ካብ ሰዓት 2:00 ድ.ቀ - 6:00 ድ.ቀ</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="baptism">
+        <h2>Baptism & Holy Confession • ስርዓተ ጥምቀትን ንስሓን</h2>
+        <div class="baptism-container">
+            <div class="baptism-instructions">
+                <p style="font-weight:700; color:#1a365d;">ሰላም ኣቦታት፡ እዚ ናይ ጥምቀት ቅጥዒ መምልኢ ኢዩ ሓደራ ክንጥቀመሉ ቤ/ን ኣ/አረጋዊ ተተሓሳስብ። ዕለት ክርሰትና እትዳለዉሎም፡</p>
+                <ol>
+                    <li>Online form ክትመልእኡ</li>
+                    <li>ሰዓት 5:40 ንግሆ ክትረኽቡ</li>
+                    <li>ህጻን ጸጏሪ ምእላይ</li>
+                    <li>ኣቦ ልግዐ (ኣቦ ክርስትና) ኣብ ሰዓቱ ምስ ወለዲ ህጻን ክመፅእ!</li>
+                </ol>
+            </div>
+            <p>If you are preparing for a child's baptism or wish to register for Holy Confession with the church fathers, please use the links below to submit your details and registration details securely online.</p>
+            <div class="action-buttons">
+                <a href="https://forms.gle/UwMEwd4y6VJDuD3H6" target="_blank" class="btn">Fill Baptism & Confession Form</a>
             </div>
         </div>
     </section>
@@ -113,7 +140,7 @@
         <div class="donation-banner">
             <h3>💝 Tithes & Offerings • ዕሽርን መባእን</h3>
             <p>Your generous contributions directly support our operations and weekly church rental maintenance.</p>
-            <a href="mailto:abunearegawi1@://gmail.com Donation" class="btn-donate">Send Donation via Interac E-Transfer</a>
+            <a href="https://buy.stripe.com/dRm8wP6wO8BdaOsbnzfjG03i" target="_blank" class="btn-donate">Send Donation via Stripe Checkout</a>
         </div>
     </section>
 
@@ -123,4 +150,3 @@
 
 </body>
 </html>
-
