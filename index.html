@@ -16,17 +16,48 @@
         .nav-links { display: flex; gap: 25px; }
         .nav-links a { text-decoration: none; color: #4a5568; font-weight: 500; font-size: 15px; }
         .nav-links a:hover { color: #d69e2e; }
-        .hero { position: relative; height: 75vh; display: flex; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 0 20px; overflow: hidden; }
-        .hero-bg-slideshow { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1; }
-        .slide { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 0; animation: imageSlider 18s linear infinite; }
-        .slide:nth-child(1) { background-image: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://unsplash.com'); animation-delay: 0s; }
-        .slide:nth-child(2) { background-image: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://unsplash.com'); animation-delay: 6s; }
-        .slide:nth-child(3) { background-image: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://unsplash.com'); animation-delay: 12s; }
-        @keyframes imageSlider { 0% { opacity: 0; transform: scale(1); } 8% { opacity: 1; } 33% { opacity: 1; } 41% { opacity: 0; transform: scale(1.05); } 100% { opacity: 0; } }
+        
+        /* FIXED BACKGROUND PHOTO SLIDESHOW STYLES */
+        .hero { 
+            position: relative;
+            height: 75vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: #fff; 
+            padding: 0 20px; 
+            overflow: hidden;
+            background-color: #0f2043;
+        }
+        .hero-bg-slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+        }
+        .slide:nth-child(1) {
+            background-image: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://pexels.com');
+        }
+        
         .hero-content { max-width: 900px; position: relative; z-index: 2; }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: 42px; margin-bottom: 15px; text-shadow: 0 4px 10px rgba(0,0,0,0.3); }
-        .hero h2 { font-size: 24px; margin-bottom: 35px; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 6px rgba(0,0,0,0.3); }
-        .hero p { text-shadow: 0 2px 5px rgba(0,0,0,0.3); font-size: 18px; max-width: 800px; margin: 0 auto; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: 42px; margin-bottom: 15px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
+        .hero h2 { font-size: 24px; margin-bottom: 35px; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
+        .hero p { text-shadow: 0 2px 5px rgba(0,0,0,0.5); font-size: 18px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+        
         .btn { background: linear-gradient(135deg, #d69e2e, #b7791f); color: white; padding: 14px 35px; text-decoration: none; border-radius: 50px; font-weight: 600; display: inline-block; }
         section { padding: 80px 24px; text-align: center; max-width: 1000px; margin: 0 auto; }
         section h2 { font-family: 'Cinzel', serif; font-size: 32px; color: #1a365d; margin-bottom: 30px; }
@@ -41,12 +72,14 @@
         .calendar-day-card { background: #f8fafc; border-radius: 12px; padding: 20px; border-top: 3px solid #d69e2e; }
         .donation-banner { background: linear-gradient(135deg, #1a365d, #0f2043); color: #ffffff; border-radius: 24px; padding: 60px 40px; }
         .btn-donate { background: #d69e2e; color: #1a365d; padding: 14px 40px; text-decoration: none; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 15px; }
+        
         .baptism-container { background: #ffffff; border-radius: 24px; padding: 40px; border: 1px solid #e2e8f0; text-align: left; margin-top: 40px; }
         .baptism-instructions { margin-bottom: 25px; padding: 20px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #d69e2e; }
         .baptism-instructions p { margin-bottom: 10px; }
         .baptism-instructions ol { padding-left: 20px; }
         .baptism-instructions li { margin-bottom: 8px; font-size: 15px; color: #4a5568; }
         .action-buttons { display: flex; gap: 15px; flex-wrap: wrap; margin-top: 25px; }
+        
         footer { background-color: #0b1329; color: #a0aec0; text-align: center; padding: 40px 20px; font-size: 14px; margin-top: 60px; }
         @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .action-buttons { flex-direction: column; } }
     </style>
@@ -66,8 +99,6 @@
 
     <header class="hero">
         <div class="hero-bg-slideshow">
-            <div class="slide"></div>
-            <div class="slide"></div>
             <div class="slide"></div>
         </div>
         <div class="hero-content">
