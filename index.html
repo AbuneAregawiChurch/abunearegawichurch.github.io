@@ -17,7 +17,7 @@
         .nav-links a { text-decoration: none; color: #4a5568; font-weight: 500; font-size: 15px; }
         .nav-links a:hover { color: #d69e2e; }
         
-        /* FIXED BACKGROUND PHOTO SLIDESHOW STYLES */
+        /* 5-IMAGE HARDWARE ACCELERATED CAROUSEL */
         .hero { 
             position: relative;
             height: 75vh; 
@@ -28,7 +28,7 @@
             color: #fff; 
             padding: 0 20px; 
             overflow: hidden;
-            background-color: #0f2043;
+            background-color: #0c1830;
         }
         .hero-bg-slideshow {
             position: absolute;
@@ -47,16 +47,48 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: 1;
-        }
-        .slide:nth-child(1) {
-            background-image: linear-gradient(rgba(15, 32, 67, 0.75), rgba(10, 25, 47, 0.85)), url('https://pexels.com');
+            opacity: 0;
+            animation: imageSliderMobile 25s linear infinite;
         }
         
-        .hero-content { max-width: 900px; position: relative; z-index: 2; }
-        .hero h1 { font-family: 'Cinzel', serif; font-size: 42px; margin-bottom: 15px; text-shadow: 0 4px 10px rgba(0,0,0,0.5); }
-        .hero h2 { font-size: 24px; margin-bottom: 35px; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 6px rgba(0,0,0,0.5); }
-        .hero p { text-shadow: 0 2px 5px rgba(0,0,0,0.5); font-size: 18px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+        /* Photo 1: Historic Orthodox Archways */
+        .slide:nth-child(1) {
+            background-image: linear-gradient(rgba(12, 24, 48, 0.75), rgba(8, 16, 32, 0.85)), url('https://pexels.com');
+            animation-delay: 0s;
+        }
+        /* Photo 2: Burning Liturgical Taper Candles */
+        .slide:nth-child(2) {
+            background-image: linear-gradient(rgba(12, 24, 48, 0.75), rgba(8, 16, 32, 0.85)), url('https://pexels.com');
+            animation-delay: 5s;
+        }
+        /* Photo 3: Sacred Icons & Cathedral Altar */
+        .slide:nth-child(3) {
+            background-image: linear-gradient(rgba(12, 24, 48, 0.75), rgba(8, 16, 32, 0.85)), url('https://pexels.com');
+            animation-delay: 10s;
+        }
+        /* Photo 4: Golden Dome Sanctuary Details */
+        .slide:nth-child(4) {
+            background-image: linear-gradient(rgba(12, 24, 48, 0.75), rgba(8, 16, 32, 0.85)), url('https://pexels.com');
+            animation-delay: 15s;
+        }
+        /* Photo 5: Traditional Stained Glass Panels */
+        .slide:nth-child(5) {
+            background-image: linear-gradient(rgba(12, 24, 48, 0.75), rgba(8, 16, 32, 0.85)), url('https://pexels.com');
+            animation-delay: 20s;
+        }
+        
+        @keyframes imageSliderMobile {
+            0% { opacity: 0; }
+            4% { opacity: 1; }
+            20% { opacity: 1; }
+            24% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+        
+        .hero-content { max-width: 900px; position: relative; z-index: 10; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: 42px; margin-bottom: 15px; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
+        .hero h2 { font-size: 24px; margin-bottom: 35px; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 8px rgba(0,0,0,0.6); }
+        .hero p { text-shadow: 0 2px 6px rgba(0,0,0,0.6); font-size: 18px; max-width: 800px; margin: 0 auto; line-height: 1.6; }
         
         .btn { background: linear-gradient(135deg, #d69e2e, #b7791f); color: white; padding: 14px 35px; text-decoration: none; border-radius: 50px; font-weight: 600; display: inline-block; }
         section { padding: 80px 24px; text-align: center; max-width: 1000px; margin: 0 auto; }
@@ -99,6 +131,10 @@
 
     <header class="hero">
         <div class="hero-bg-slideshow">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
             <div class="slide"></div>
         </div>
         <div class="hero-content">
@@ -152,7 +188,7 @@
             </div>
             <p>If you are preparing for a child's baptism or wish to register for Holy Confession with the church fathers, please use the links below to submit your details and registration details securely online.</p>
             <div class="action-buttons">
-                <a href="https://forms.gle" target="_blank" class="btn">Fill Baptism & Confession Form</a>
+                <a href="https://forms.gle/UwMEwd4y6VJDuD3H6" target="_blank" class="btn">Fill Baptism & Confession Form</a>
             </div>
         </div>
     </section>
@@ -181,7 +217,7 @@
         <div class="donation-banner">
             <h3>💝 Tithes & Offerings • ዕሽርን መባእን</h3>
             <p>Your generous contributions directly support our operations and weekly church rental maintenance.</p>
-            <a href="https://stripe.com" target="_blank" class="btn-donate">Send Donation via Stripe Checkout</a>
+            <a href="https://buy.stripe.com/dRm8wP6wO8BdaOsbnzfjG03" target="_blank" class="btn-donate">Send Donation via Stripe Checkout</a>
         </div>
     </section>
 
