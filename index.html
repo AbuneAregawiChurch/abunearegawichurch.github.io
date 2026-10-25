@@ -58,6 +58,30 @@
   } 
 }
 
+        .hero-content { max-width: 800px; position: relative; z-index: 10; }
+        .hero h1 { font-family: 'Cinzel', serif; font-size: 38px; margin-bottom: 12px; text-shadow: 0 4px 12px rgba(0,0,0,0.8); }
+        .hero h2 { font-size: 22px; margin-bottom: 25px; font-weight: 300; color: #e2e8f0; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
+        .hero p { text-shadow: 0 2px 6px rgba(0,0,0,0.8); font-size: 16px; max-width: 700px; margin: 0 auto; }
+        .btn { background: linear-gradient(135deg, #d69e2e, #b7791f); color: white; padding: 12px 30px; text-decoration: none; border-radius: 50px; font-weight: 600; display: inline-block; margin-top: 20px; }
+        section { padding: 60px 20px; text-align: center; max-width: 1000px; margin: 0 auto; }
+        section h2 { font-family: 'Cinzel', serif; font-size: 28px; color: #1a365d; margin-bottom: 20px; }
+        .tigrinya-text { color: #718096; font-size: 15px; display: block; margin-top: 12px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px; text-align: left; }
+        .info-card { background: #fff; padding: 25px; border-radius: 12px; border-left: 4px solid #1a365d; box-shadow: 0 5px 15px rgba(0,0,0,0.02); }
+        .info-card.gold-card { border-left-color: #d69e2e; }
+        .schedule-box { background: #ffffff; border-radius: 16px; padding: 30px; text-align: left; margin-top: 30px; border: 1px solid #e2e8f0; }
+        .schedule-item { padding: 15px 0; border-bottom: 1px solid #f1f5f9; }
+        .calendar-container { background: #ffffff; border-radius: 16px; padding: 30px; margin-top: 30px; border: 1px solid #e2e8f0; text-align: left; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .calendar-day-card { background: #f8fafc; border-radius: 12px; padding: 20px; border-top: 3px solid #d69e2e; }
+        .donation-banner { background: linear-gradient(135deg, #1a365d, #0f2043); color: #ffffff; border-radius: 16px; padding: 50px 30px; margin-top: 30px; }
+        .btn-donate { background: #d69e2e; color: #1a365d; padding: 12px 35px; text-decoration: none; border-radius: 50px; font-weight: 700; display: inline-block; margin-top: 15px; }
+        .baptism-container { background: #ffffff; border-radius: 16px; padding: 30px; border: 1px solid #e2e8f0; text-align: left; margin-top: 30px; }
+        .baptism-instructions { margin-bottom: 20px; padding: 20px; background-color: #f8fafc; border-radius: 12px; border-left: 4px solid #d69e2e; }
+        .baptism-instructions ol { padding-left: 20px; margin-top: 8px; }
+        .baptism-instructions li { margin-bottom: 6px; font-size: 15px; color: #4a5568; }
+        footer { background-color: #0b1329; color: #a0aec0; text-align: center; padding: 30px 20px; font-size: 13px; margin-top: 50px; }
+        @media (max-width: 768px) { .info-grid { grid-template-columns: 1fr; } .nav-links { display: none; } }
     </style>
 </head>
 <body>
@@ -157,13 +181,3 @@
             <p>Your generous contributions directly support our operations and weekly church rental maintenance.</p>
             <p class="tigrinya-text" style="color: #e2e8f0; margin-top: 10px; margin-bottom: 20px;">ኩሉ ግዜ እትገብሩዎ ዕሽርን መባእን፡ ንናይ ቤተ ክርስቲያንና መዓልታዊ ንጥፈታትን ሰሙናዊ ናይ ቦታ ኪራይ መኽፈሊን ብቐጥታ ዝድግፍ እዩ።</p>
             <a href="https://buy.stripe.com/dRm8wP6wO8BdaOsbnzfjG03" target="_blank" class="btn-donate">Send Donation via Stripe Checkout • ብስትራይፕ ዕሽርን መባእን ስደዱ</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Abune Aregawi Eritrean Orthodox Tewahedo Church. All Rights Reserved.</p>
-        <p style="font-size: 12px; margin-top: 15px; color: #718096;">© 2026 ቤተ ክርስቲያን ተዋህዶ ኤርትራ ኣቡነ ኣረጋዊ። ኩሉ መሰል ዝተሓለወ እዩ።</p>
-    </footer>
-
-</body>
-</html>
